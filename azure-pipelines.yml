@@ -1,6 +1,11 @@
 trigger:
-- master
-- dev
+  - master
+  - dev
+variables:
+  - name: project_name
+    value: 'app'
+  - name: GRADLE_USER_HOME
+    value: '$(Pipeline.Workspace)/.gradle'
 
 pool:
   vmImage: 'Ubuntu-16.04'
